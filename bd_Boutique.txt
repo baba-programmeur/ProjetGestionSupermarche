@@ -1,0 +1,82 @@
+CREATE DATABASE boutique;
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE table connexion (
+    login varchar(20),
+    mdp varchar(8) NOT NULL,
+    CONSTRAINT pk_connexion PRIMARY KEY (login)
+);
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE table personnel(
+    num_i_n varchar(13),
+    prenom varchar(50) NOT null,
+    nom varchar(30) NOT null,
+    type varchar(10) NOT null,
+    sexe char NOT null,
+    adresse varchar(50),
+    email varchar(30) unique,
+    tel varchar(14),
+    age int unsigned NOT null,
+    CONSTRAINT pk_personne PRIMARY KEY (num_i_n)
+);
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE table compte_client(
+    num_compte varchar(10),
+    num_i_n_client varchar(13) NOT NULL,  
+    prenom_client varchar(50) NOT NULL,
+    nom_client varchar(30) NOT NULL,
+    tel char(14),
+    email char(50) unique,
+    montant_det float unsigned,
+    montant_depot float unsigned,
+    CONSTRAINT pk_num_compte PRIMARY KEY (num_compte)
+);
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE table action(
+    nom_action varchar(10) NOT NULL,/*emprunt ou depot*/
+    num_compte varchar(10),
+    date_action date,
+    montant_av_act float unsigned NOT NULL,
+    montant_ap_act float unsigned NOT NULL,
+    CONSTRAINT fk_num_compte FOREIGN KEY(num_compte) REFERENCES compte_client(num_compte)
+);
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE table emplacement(
+    nom_empl varchar(20) ,
+    capacite int unsigned NOT NULL,
+    nb_ranges int unsigned NOT NULL,
+    nb_zones int unsigned NOT NULL,
+    CONSTRAINT pk_nom_empl PRIMARY KEY(nom_empl)
+);
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE produit(
+    nom_prod varchar(50),
+    nom_categ varchar(50),
+    nom_empl_conteneur varchar(20),
+    zone_conteneur char NOT NULL,
+    range_conteneur int unsigned NOT NULL,
+    date_dexpiration date,
+    prix_revient float unsigned,
+    prix_vente float unsigned,
+    stock int unsigned NOT NULL,
+    stock_max INT NOT NULL,
+    CONSTRAINT pk_nom_prod PRIMARY KEY(nom_prod),
+    CONSTRAINT fk_nom_empl_conteneur FOREIGN KEY(nom_empl_conteneur) REFERENCES emplacement(nom_empl)
+);
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE achats(
+    id_achat char(8),
+    num_i_n_gerant varchar(50) NOT NULL,
+    nom_achteur varchar(50) NOT NULL,
+    num_i_n_achteur varchar(20),/*Null si l'acheteur n'a pas de compte et son login sinon*/
+    nb_ech_ach INT NOT NULL,
+    date_achat date,
+    prix_achat float unsigned NOT NULL,
+    emplcement char(50) NOT NULL,
+    CONSTRAINT pk_achat PRIMARY KEY (id_achat)
+);
+CREATE TABLE categorie(
+     nom_categ char(50),
+    description char(100),
+    CONSTRAINT pk_nom_categ PRIMARY KEY (nom_categ)
+);

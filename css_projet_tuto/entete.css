@@ -1,0 +1,185 @@
+header
+{
+	font-size:15px;
+	border:4px solid black;
+	text-align:center;
+	border-radius:5px;
+}
+#retour
+{
+	text-decoration:none;
+	border:1px solid white;
+	border-radius:3px;
+	color:#ffffff;
+	background-color:/*#99ff00;*/silver;/*black;*/
+	text-align:center;
+	width:8em;
+	font-size:20px;
+	width:90% ;
+    border-radius:8px;
+}
+span
+{
+	color:red;
+	font-weight:bold;
+}
+.fms
+{
+	margin-left:18em;
+}
+.submit
+{
+	margin-left:3em;
+    background-color:#88ff55;
+	border-radius:8px;
+}
+#h1_b
+{
+	margin-left:10em;
+	margin-top:-1.4em;
+	text-decoration:none;
+	border:1px solid white;
+	border-radius:3px;
+	color:#ffffff;
+	background-color:/*#99ff00;*/silver;/*black;*/
+	text-align:center;
+	font-size:20px;
+    border-radius:8px;
+	width:83%;	
+}
+table
+{
+	border-collapse:collapse;
+}
+th,td
+{
+	border:2.5px solid black;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+.succ
+{
+	color:green;
+	font-weight:bold;
+}
+.avert
+{
+	color:orange;
+	font-weight:bold;
+}
+.options
+{
+	color:black;
+}
+a
+{
+	text-decoration:none;
+}
+nav ul
+{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	color:yellow;
+}
+nav ul li
+{
+	margin:0px;
+	padding:0px;
+	float:left;
+	width:200px;
+	height:48px;
+	background-color:gray;
+	line-height:40px;
+	text-align:center;
+	width:16em;
+}
+nav ul li a
+{
+	display:block;
+	border-radius:30px;
+	text-decoration:none;
+	color:yellow;
+}
+.f
+{
+	color:green;
+}
+
+nav ul li a:hover
+{
+	background-color:green;
+	text-decoration:none;
+	color:yellow;
+}
+nav ul li ul li
+{
+	display:none;
+}
+nav ul li:hover ul li
+{
+	display:block;
+	width:16em;
+	color:yellow;
+    
+}
+nav ul li:hover ul li a
+{
+    color:yellow;
+    text-decoration:none;	
+}
+nav
+{
+	margin-left:19em;
+}
+#bd_sup_c
+{
+	background-image:none;
+}
+#bd_sup_g
+{
+	background-image:none;
+}
+#div_prod
+{
+	margin-left:20em;
+	margin-top:-4em;
+	
+}
+#div_date
+{
+	margin-left:20em;
+	margin-top:-4em;
+}
+.div_caissier
+{
+	margin-left:20em;
+	margin-top:-4em;
+}
+#bd_gerant
+{
+	background:url("../images/gerant.jpg");
+	/*background-size:real;*/
+	background-repeat:repeat;
+	background-position:top;
+}
+#bd_caissier
+{
+	background:url("../images/caissier.jpg");
+	/*background-size:real;*/
+	background-repeat:repeat;
+	background-position:top;
+}
+#bd_c_chef
+{
+	background:url("../images/caissier_chef.jpg");
+	background-size:cover;
+	/*background-repeat:repeat;*/
+	background-position:bottom;
+}
+#dd
+{
+	color:#ffffff;
+	font-weight:normal;
+}

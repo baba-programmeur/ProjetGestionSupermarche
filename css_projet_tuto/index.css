@@ -1,0 +1,38 @@
+#f_aut
+{
+	margin-left:25em;
+}
+#h1_index
+{
+	margin-left:1em;
+	color:#FFFF00;
+	font-weight:bold;
+	
+}
+#from_login_mdp
+{
+	margin-left:10em;
+}
+#subm_autentif
+{
+	margin-left:0em;
+	background-color:#F0E68C;
+	border-radius:5px;
+	width:8.8em;
+}
+#aut1
+{
+	border:1px solid #000000;
+	border-radius:2px 2px 0px 0px;
+	margin-bottom:1px;
+}
+#aut2
+{
+	border:1px solid #000000;
+	border-radius:0px 0px 2px 2px;
+}
+body
+{
+	background-image:url("../images/index.jpg");
+	background-size:cover;
+}
